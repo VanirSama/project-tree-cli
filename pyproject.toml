@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "project-tree"
+version = "0.1.0"
+description = "A CLI tool for printing a tree structure of a project."
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "VanirSama"}
+]
+requires-python = ">=3.8"
+keywords = ["tree", "cli", "project", "structure", "filesystem"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+    "Topic :: Utilities",
+]
+dependencies = []
+
+[project.scripts]
+project-tree = "project_tree.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/VanirSama/project-tree"
+Repository = "https://github.com/VanirSama/project-tree"
+Issues = "https://github.com/VanirSama/project-tree/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+project_tree = ["py.typed"]
