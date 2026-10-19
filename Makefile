@@ -14,5 +14,5 @@ test:
     pytest -q
 
 clean:
-    rm -rf build dist src/project_tree.egg-info .pytest_cache
+    rm -rf build dist src/project-tree-cli.egg-info .pytest_cache
     find . -type d -name __pycache__ -prune -exec rm -rf {} +

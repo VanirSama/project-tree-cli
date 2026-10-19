@@ -24,15 +24,15 @@ classifiers = [
 dependencies = []
 
 [project.scripts]
-project-tree = "project_tree.cli:main"
+project-tree-cli = "project_tree_cli.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/VanirSama/project-tree"
-Repository = "https://github.com/VanirSama/project-tree"
-Issues = "https://github.com/VanirSama/project-tree/issues"
+Homepage = "https://github.com/VanirSama/project-tree-cli"
+Repository = "https://github.com/VanirSama/project-tree-cli"
+Issues = "https://github.com/VanirSama/project-tree-cli/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [tool.setuptools.package-data]
-project_tree = ["py.typed"]
+project-project_tree_cli = ["py.typed"]

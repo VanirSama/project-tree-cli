@@ -1,3 +1,3 @@
 include README.md
 include LICENSE
-recursive-include src/project_tree *.py
+recursive-include src/project-tree-cli *.py
