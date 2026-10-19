@@ -5,7 +5,7 @@ import os
 from pathlib import Path
 from typing import Iterable, List, Optional, Sequence
 
-# Default ignored patterns
+
 DEFAULT_IGNORED_PATTERNS: List[str] = [
     "__pycache__",
     "*.pyc",
@@ -20,7 +20,6 @@ DEFAULT_IGNORED_PATTERNS: List[str] = [
     ".gitignore",
 ]
 
-# Box-drawing characters
 BRANCH = "├── "
 LAST = "└── "
 PIPE = "│   "
@@ -35,7 +34,6 @@ def format_size(size_bytes: int) -> str:
 
 
 def load_excludefile(path: Optional[str]) -> List[str]:
-    """Load patterns from a .gitignore-like file."""
     if not path: return []
     p = Path(path).expanduser().resolve()
     if not p.exists(): raise FileNotFoundError(f"Ignore file '{p}' does not exist")
@@ -51,7 +49,6 @@ def load_excludefile(path: Optional[str]) -> List[str]:
 
 
 def is_ignored(name: str, relative_path: str, patterns: Sequence[str]) -> bool:
-    """Return True if `name` or `relative_path` matches any ignore pattern."""
     for pattern in patterns:
         if pattern.endswith("/"):
             stripped = pattern[:-1]
@@ -73,7 +70,6 @@ def is_ignored(name: str, relative_path: str, patterns: Sequence[str]) -> bool:
 
 
 def _safe_iterdir(path: Path) -> List[Path]:
-    """Return sorted directory entries; directories first, then files."""
     try: entries = list(path.iterdir())
     except (PermissionError, OSError): return []
 
@@ -132,7 +128,6 @@ def _build_tree(path: Path, prefix: str, patterns: Sequence[str], show_size: boo
 
 
 def generate_tree(root: Path, extra_ignored: Iterable[str], show_size: bool, excludefile: Optional[str]) -> str:
-    """Build the entire tree as a single string."""
     patterns: List[str] = list(DEFAULT_IGNORED_PATTERNS)
     patterns.extend(p for p in extra_ignored if p)
     patterns.extend(load_excludefile(excludefile))

@@ -2,6 +2,6 @@ from __future__ import annotations
 
 import sys
 
-from project_tree.cli import main
+from project_tree_cli.cli import main
 
 if __name__ == "__main__": sys.exit(main())

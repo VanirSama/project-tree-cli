@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from project_tree.core import (
+from project_tree_cli.core import (
     DEFAULT_IGNORED_PATTERNS,
     format_size,
     is_ignored,

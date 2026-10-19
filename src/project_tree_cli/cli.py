@@ -1,4 +1,3 @@
-"""Command-line interface for project-tree."""
 from __future__ import annotations
 
 import argparse
@@ -6,13 +5,12 @@ import sys
 from pathlib import Path
 from typing import List, Optional, Sequence
 
-from project_tree import __version__
-from project_tree.core import generate_tree
-from project_tree.utils import print_error, print_info
+from project_tree_cli import __version__
+from project_tree_cli.core import generate_tree
+from project_tree_cli.utils import print_error, print_info
 
 
 def _parse_ignore_items(items: Sequence[str]) -> List[str]:
-    """Split items on commas so both `-i a b c` and `-i a,b,c` work."""
     out: List[str] = []
     for item in items:
         for part in item.split(","):

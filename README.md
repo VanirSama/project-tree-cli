@@ -14,28 +14,28 @@ A small, dependency-free Python CLI util that prints a recursive tree structure 
 ## Installation
 
 ### From PyPi (once published):
-```pip install project-tree```
+```pip install project-tree-cli```
 ### From GitHub
-```pip install git+https://github.com/VanirSama/project-tree.git```
+```pip install git+https://github.com/VanirSama/project-tree-cli.git```
 
 ## Usage
 
-| CLI-command usage example                                                                        | Description                                                                                    |
-|--------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
-| `project-tree`                                                                                   | Tree of current directory.                                                                     |
-| `project-tree .\my-project`                                                                      | Tree of `.\my-project`                                                                         |
-| `project-tree -s`                                                                                | Tree with files size displayed                                                                 |
-| `project-tree -i dist`<br>`project-tree -i dist docs *.tmp`<br>`project-tree -i dist,docs,*.tmp` | Add ignored files/folders<br>*(either space- or comma- separated sequences work equally fine)* |
-| `project-tree -e exclude.txt`                                                                    | Load patterns from `.gitignore`-like file.                                                     |
-| `project-tree -o`<br>`project-tree -o .\tree\output.txt`                                         | Write output tree into custom file or into `project-tree.txt` by default.                      |
+| CLI-command usage example                                                                            | Description                                                                                    |
+|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| `project-tree-cli`                                                                                   | Tree of current directory.                                                                     |
+| `project-tree-cli .\my-project`                                                                      | Tree of `.\my-project`                                                                         |
+| `project-tree-cli -s`                                                                                | Tree with files size displayed                                                                 |
+| `project-tree-cli -i dist`<br>`project-tree -i dist docs *.tmp`<br>`project-tree -i dist,docs,*.tmp` | Add ignored files/folders<br>*(either space- or comma- separated sequences work equally fine)* |
+| `project-tree-cli -e exclude.txt`                                                                    | Load patterns from `.gitignore`-like file.                                                     |
+| `project-tree-cli -o`<br>`project-tree -o .\tree\output.txt`                                         | Write output tree into custom file or into `project-tree.txt` by default.                      |
 
 ## Example output
 
-`project-tree -s -i tests -o`
+`project-tree-cli -s -i tests -o`
 
 ```txt
 src/
-└── project_tree/
+└── project_tree_cli/
     ├── __init__.py  (86B)
     ├── __main__.py  (132B)
     ├── cli.py  (3.5KB)
