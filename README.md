@@ -13,9 +13,11 @@ A small, dependency-free Python CLI util that prints a recursive tree structure 
 
 ## Installation
 
-### From PyPi (once published):
+### From PyPi (via pip or uv):
 ```pip install project-tree-cli```
-### From GitHub
+
+```uv tool install project-tree-cli```
+### From GitHub:
 ```pip install git+https://github.com/VanirSama/project-tree-cli.git```
 
 ## Usage
